@@ -64,7 +64,7 @@ class Memoria:
 		bl2 = [aux2, 0]
 
 		
-		if (SIZEbloc > self.numpag):
+		if (SIZEbloc > self.numbloc):
 			self.blocos.append(bl1)
 			self.blocos.append(bl2)
 			self.numbloc += 2
