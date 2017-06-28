@@ -274,7 +274,7 @@ class Gerencia:
 	def mudarCacheL1(self, word, endereco):
 		for i in self.organiza:
 			for j in i[1][j]:
-				j.atualizarPalavra(word, endereco)
+				j.cache.atualizarPalavra(word, endereco)
 
 	def printDisco(self):
 		self.disco.print()
@@ -290,22 +290,6 @@ class Gerencia:
 		proc = self.organiza[aux][1][tmp]
 		proc.cache.print()
 
-
-"""d = Disco()
-#d.print()
-
-aux = d.retornarPagina(88)
-
-m = Memoria()
-m.receberPagina(aux)
-
-aux = m.retornarBloco(88)
-
-c = Cache(2)
-
-c.receberBloco(aux)
-
-c.print()"""
 
 
 print("Bem-vindo ao simulador de hierarquia de memória!!\n\n")
@@ -351,20 +335,3 @@ while 1:
 		if casoMem == 4:
 			num = int(input("\nDigite o número da Cache L1: "))
 			gerenciador.printL1(num)
-
-
-
-
-"""g = Gerencia(4)
-
-print(g.leitura(3, 88))
-
-g.escrita(3, 30, 5)
-
-print(g.organiza[1][1][1].cache.blocos)
-
-g.escrita(3, 50, 200)
-
-g.leitura(3, 200)
-
-print(g.organiza[1][1][1].cache.blocos)"""
